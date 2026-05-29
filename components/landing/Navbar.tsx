@@ -43,7 +43,8 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a href="#contacto" className="btn-green !text-xs !px-5 !py-2">
+          <a href="https://wa.me/34695924946?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20DogIt."
+            className="btn-green !text-xs !px-5 !py-2" target="_blank" rel="noopener noreferrer">
             Reservar cita
           </a>
         </nav>
@@ -63,7 +64,8 @@ export default function Navbar() {
             </a>
           ))}
           <div className="px-6 py-4">
-            <a href="#contacto" className="btn-green w-full">Reservar cita</a>
+            <a href="https://wa.me/34695924946?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20DogIt."
+              className="btn-green w-full" target="_blank" rel="noopener noreferrer">Reservar cita</a>
           </div>
         </div>
       )}

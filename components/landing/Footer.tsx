@@ -1,4 +1,4 @@
-import { MapPin, PawPrint } from "lucide-react";
+import { Phone, MapPin, PawPrint } from "lucide-react";
 
 const servicios = ["Adiestramiento Básico", "Adiestramiento Avanzado", "Cachorros", "Agility", "Clases Grupales"];
 const accesos = ["Inicio", "Servicios", "Reseñas", "FAQ", "Contacto"];
@@ -44,6 +44,10 @@ export default function Footer() {
         <div>
           <h4 className="text-xs font-bold uppercase tracking-[0.2em] mb-5 text-white/90">Contacto</h4>
           <ul className="space-y-3 text-white/45 text-xs">
+            <li className="flex items-start gap-2">
+              <Phone size={12} className="mt-0.5 shrink-0 text-[#3CB371]" />
+              <a href="https://wa.me/34695924946" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">695 92 49 46</a>
+            </li>
             <li className="flex items-start gap-2">
               <MapPin size={12} className="mt-0.5 shrink-0 text-[#3CB371]" />
               <span>Ctra. de servicio Chauchina-Jau, 18329 Granada</span>

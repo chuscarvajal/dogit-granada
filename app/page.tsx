@@ -10,10 +10,12 @@ import FAQ from "@/components/landing/FAQ";
 import CTABanner from "@/components/landing/CTABanner";
 import Contact from "@/components/landing/Contact";
 import Footer from "@/components/landing/Footer";
+import FloatingWA from "@/components/landing/FloatingWA";
 
 export default function Home() {
   return (
     <main>
+      <FloatingWA />
       <Navbar />
       <Hero />
       <About />
