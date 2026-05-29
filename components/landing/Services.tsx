@@ -1,54 +1,68 @@
-﻿const servicios = [
+const servicios = [
   {
-    img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&h=340&fit=crop",
-    badge: "GRATIS",
-    badgeSub: "Evaluación inicial",
-    title: "Adiestramiento Básico",
-    desc: "Obediencia fundamental: sentado, quieto, tumbado, aquí. Ideal para cachorros y perros sin entrenamiento previo. Incluye evaluación conductual gratuita.",
+    num: "01",
+    title: "Obediencia básica",
+    desc: "Sentado, quieto, tumbado, aquí... Trabajamos juntos para construir una comunicación sólida desde cero. Grupos reducidos con atención personalizada.",
+    badge: null,
+    link: "https://wa.me/34695924946?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20obediencia%20b%C3%A1sica%20en%20DogIt.",
   },
   {
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&h=340&fit=crop",
-    title: "Adiestramiento Avanzado",
-    desc: "Órdenes complejas, control a distancia y trabajo en entornos con distracciones. Para perros que ya dominan los comandos básicos.",
+    num: "02",
+    title: "Agility y deportes",
+    desc: "Circuitos de agilidad y deporte canino para perros que ya dominan los fundamentos. Ejercitamos cuerpo y mente en un ambiente divertido.",
+    badge: "MÁS PEDIDO",
+    link: "https://wa.me/34695924946?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20agility%20en%20DogIt.",
   },
   {
-    img: "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=500&h=340&fit=crop",
-    title: "Adiestramiento de Cachorros",
-    desc: "Socialización temprana, hábitos positivos y educación básica adaptada al ritmo natural de aprendizaje del cachorro.",
+    num: "03",
+    title: "Educación de cachorros",
+    desc: "El momento ideal para empezar. Socializamos, creamos hábitos sanos y establecemos las bases para una vida feliz desde los primeros meses.",
+    badge: null,
+    link: "https://wa.me/34695924946?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20educaci%C3%B3n%20de%20cachorros%20en%20DogIt.",
+  },
+  {
+    num: "04",
+    title: "Seguimiento y apoyo",
+    desc: "Resolvemos dudas entre sesiones y ajustamos el plan según el progreso de cada perro. Continuidad para no perder el hilo.",
+    badge: null,
+    link: "https://wa.me/34695924946?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20seguimiento%20en%20DogIt.",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-20 bg-[#f9fffe]">
-      <div className="wrap">
-        <div className="text-center mb-14">
-          <span className="text-[#3CB371] text-xs font-bold uppercase tracking-[0.22em] mb-2 block">
-            Lo que ofrecemos
+    <section id="servicios" className="bg-[#1b3d2a]">
+      <div className="wrap py-20">
+        <div className="mb-14">
+          <span className="text-[#3CB371] text-xs font-bold uppercase tracking-[0.22em] mb-3 block">
+            Formación
           </span>
-          <h2 className="font-black text-[#1a1a1a] text-3xl lg:text-[38px]">
-            Nuestros Servicios
+          <h2 className="font-black text-white leading-tight" style={{ fontSize: "clamp(26px, 4vw, 44px)" }}>
+            Qué podemos hacer <br className="hidden lg:block" />
+            <span className="text-[#3CB371] italic">por tu perro</span>
           </h2>
+          <p className="text-white/60 text-[15px] mt-4 max-w-lg">
+            Cada perro es único. Diseñamos el programa según su carácter y tus objetivos.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden">
           {servicios.map((s) => (
-            <div key={s.title}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-[#e8f5ee]">
-              <div className="relative h-[200px] overflow-hidden">
-                <img src={s.img} alt={s.title} className="w-full h-full object-cover" />
+            <div key={s.num} className="bg-[#1b3d2a] p-8 lg:p-10 flex flex-col gap-4 hover:bg-[#243f2d] transition-colors duration-200">
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-black text-white/20 text-5xl leading-none select-none">{s.num}</span>
                 {s.badge && (
-                  <div className="absolute top-4 left-4 bg-[#3CB371] text-white text-[10px] font-black uppercase tracking-widest px-3 py-2 rounded-lg leading-tight">
+                  <span className="text-[10px] font-black uppercase tracking-widest bg-[#3CB371] text-white px-3 py-1.5 rounded-full shrink-0">
                     {s.badge}
-                    <br />
-                    <span className="font-normal normal-case tracking-normal text-[9px]">{s.badgeSub}</span>
-                  </div>
+                  </span>
                 )}
               </div>
-              <div className="p-6">
-                <h3 className="font-black text-[#1a1a1a] text-lg mb-2">{s.title}</h3>
-                <p className="text-[#777] text-sm leading-[1.8]">{s.desc}</p>
-              </div>
+              <h3 className="font-black text-white text-xl">{s.title}</h3>
+              <p className="text-white/60 text-[14px] leading-[1.8] flex-1">{s.desc}</p>
+              <a href={s.link} target="_blank" rel="noopener noreferrer"
+                className="text-[#3CB371] text-sm font-bold hover:text-white transition-colors duration-200 mt-2">
+                Consultar →
+              </a>
             </div>
           ))}
         </div>
