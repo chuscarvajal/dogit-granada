@@ -1,51 +1,34 @@
-﻿export default function WhyChooseUs() {
+export default function WhyChooseUs() {
   return (
-    <section className="relative py-16 lg:py-24 bg-[#f0faf5] overflow-hidden">
-      {/* Watermark background */}
-      <div className="absolute inset-y-0 left-0 w-1/2 flex items-center justify-center pointer-events-none">
-        <img
-          src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=700&h=700&fit=crop"
-          alt=""
-          className="w-full h-full object-cover opacity-[0.08]"
-        />
-      </div>
+    <section className="py-20 lg:py-28 bg-white">
+      <div className="wrap">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-      <div className="relative wrap">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* Izquierda: texto */}
-          <div>
-            <h2 className="font-black text-[#3CB371] text-2xl lg:text-[36px] leading-tight mb-5">
-              Campos de Entrenamiento al Aire Libre
-            </h2>
-            <p className="text-[#555] text-[15px] leading-[1.85]">
-              Disponemos de amplias instalaciones al aire libre donde tu perro puede desarrollar todo su potencial. Espacios seguros y adaptados para cada etapa del adiestramiento, desde la socialización básica hasta el trabajo avanzado en libertad.
-            </p>
-          </div>
-
-          {/* Derecha: 3 imágenes — 1 grande + 2 pequeñas apiladas */}
-          <div className="grid grid-cols-[1.15fr_1fr] gap-3 lg:gap-4 h-[380px] lg:h-[420px]">
-            {/* Imagen grande a la izquierda */}
-            <img
-              src="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=400&h=700&fit=crop"
-              alt="Perro entrenando al aire libre"
-              className="w-full h-full object-cover rounded-2xl"
-            />
-            {/* 2 imágenes pequeñas apiladas a la derecha */}
-            <div className="flex flex-col gap-3 lg:gap-4 h-full">
-              <img
-                src="/images/campos-pastor.webp"
-                alt="Pastor alemán en campo de entrenamiento al aire libre"
-                className="flex-1 w-full object-cover rounded-2xl"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop"
-                alt="Perros corriendo en campo de entrenamiento"
-                className="flex-1 w-full object-cover rounded-2xl"
-              />
+          <div className="grid grid-cols-2 gap-3">
+            <div className="flex flex-col gap-3">
+              <img src="/images/programa-cachorro.webp" alt="Cachorro en sesión" className="w-full h-[180px] object-cover rounded-xl" />
+              <img src="/images/programa-agility.webp" alt="Agility en DogIt Granada" className="w-full h-[180px] object-cover rounded-xl" />
             </div>
+            <img src="/images/programa-grande.webp" alt="Adiestramiento en Granada" className="w-full h-[375px] object-cover rounded-xl" />
           </div>
 
+          <div>
+            <span className="section-tag">Por qué elegirnos</span>
+            <h2 className="leading-tight mb-5" style={{ fontSize: "clamp(26px, 3.5vw, 40px)" }}>
+              Programas de <em className="text-[#D4522A] not-italic">adiestramiento</em>
+            </h2>
+            <p className="text-[#6B4C3A] leading-[1.85] mb-6">
+              Desde la obediencia básica hasta el agility avanzado y el trabajo de comportamiento. Nuestros programas están diseñados para cada etapa de vida de tu perro, con métodos positivos y resultados reales.
+            </p>
+            <ul className="space-y-3">
+              {["Metodología 100% positiva sin castigos", "Grupos reducidos y atención personalizada", "Seguimiento entre sesiones incluido", "Adiestradores con experiencia contrastada"].map(t => (
+                <li key={t} className="flex items-center gap-3 text-[#6B4C3A] text-[15px]">
+                  <span className="w-5 h-5 rounded-full bg-[#D4522A] flex items-center justify-center text-white text-xs shrink-0">✓</span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
